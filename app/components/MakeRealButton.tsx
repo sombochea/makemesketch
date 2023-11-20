@@ -7,7 +7,7 @@ export function MakeRealButton() {
 	const { addToast } = useToasts()
 
 	const handleClick = useCallback(async () => {
-		console.log('make real')
+		console.log('make me sketch')
 		try {
 			await makeReal(editor)
 		} catch (e) {

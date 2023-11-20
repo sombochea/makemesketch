@@ -3,9 +3,9 @@
 import dynamic from 'next/dynamic'
 import '@tldraw/tldraw/tldraw.css'
 import { MakeRealButton } from './components/MakeRealButton'
-import { TldrawLogo } from './components/TldrawLogo'
+// import { TldrawLogo } from './components/TldrawLogo'
 import { ResponseShapeUtil } from './ResponseShape/ResponseShape'
-import { RiskyButCoolAPIKeyInput } from './components/RiskyButCoolAPIKeyInput'
+// import { RiskyButCoolAPIKeyInput } from './components/RiskyButCoolAPIKeyInput'
 
 const Tldraw = dynamic(async () => (await import('@tldraw/tldraw')).Tldraw, {
 	ssr: false,
@@ -17,11 +17,12 @@ export default function App() {
 	return (
 		<div className="editor">
 			<Tldraw
-				persistenceKey="make-real"
+				persistenceKey="make-me-sketch"
 				shareZone={<MakeRealButton />}
 				shapeUtils={shapeUtils}
+				
 			>
-				<TldrawLogo />
+				{/* <TldrawLogo /> */}
 				{/* <RiskyButCoolAPIKeyInput /> */}
 			</Tldraw>
 		</div>
