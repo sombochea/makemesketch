@@ -3,21 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
+    "dev2": "concurrently \"next dev --turbo\" \"HOST=localhost PORT=1234 y-websocket\" --kill-others",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@tldraw/tldraw": "^2.0.0-canary.ba4091c59418",
+    "@tldraw/tldraw": "^2.0.0-canary.a55989f42003",
     "next": "14.0.3",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "y-utility": "^0.1.3",
+    "y-websocket": "^1.5.0",
+    "yjs": "^13.6.10"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "concurrently": "^8.2.2",
     "eslint": "^8",
     "eslint-config-next": "14.0.3",
     "typescript": "^5"
